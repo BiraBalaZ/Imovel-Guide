@@ -71,10 +71,6 @@ else {
 }
 
 if(isset($_POST['submit'])) {
-    $nome  = $_POST['nome'];
-    $cpf   = $_POST['cpf'];
-    $creci = $_POST['creci'];
-
     $result = mysqli_query($conexao, "INSERT INTO corretores(nome, cpf, creci)
     VALUES ('$nome', '$cpf', '$creci')");
 
@@ -82,8 +78,6 @@ if(isset($_POST['submit'])) {
 }
 
 if(isset($_POST['delete'])) {
-    $id = $_POST['id'];
-
     $result = mysqli_query($conexao, "DELETE FROM corretores WHERE id = '$id'");
 
     header("Location: " . $_SERVER['PHP_SELF']);

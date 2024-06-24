@@ -1,5 +1,18 @@
 <?php
 include "config.php";
+
+$id = $_GET['id'];
+$sql = "SELECT * FROM corretores WHERE id = $id";
+$stmt = $conexao->prepare($sql);
+$stmt->execute();
+$result = $stmt->get_result();
+
+
+$row = $result->fetch_assoc();
+$cpf = $row['cpf'];
+$creci = $row['creci'];
+$nome = $row['nome'];
+
 ?>
 
 <!DOCTYPE html>

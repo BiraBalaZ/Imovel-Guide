@@ -14,7 +14,7 @@ include "config.php";
     <main>
         <p>Cadastro Corretor</p>
         <div class="form-container">
-            <form action="index.php" method="POST">
+            <form action="" method="POST">
                 <input type="text"    name="cpf"    id="cpf"   minlength="11" maxlength="11" oninput="checkCpf()"   required placeholder="Digite seu CPF">
                 <input type="text"    name="creci"  id="creci" minlength="2"  maxlength="6"  oninput="checkCreci()" required placeholder="Digite seu CRECI"><br>
                 <input type="hidden"  name="id"     id="id"    minlength="1"  maxlength="99" required placeholder="id">
@@ -46,7 +46,7 @@ include "config.php";
                         <a class="btn btn-primary text-white" href="./update.php?id=<?=$row['id']?>">Editar</a>
                     </td>
                     <td>
-                        <form action="index.php" method="POST" style="display:inline;">
+                        <form action="" method="POST" style="display:inline;">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($row['id']) ?>">
                             <button type="submit" name="delete">Excluir</button>
                         </form>
